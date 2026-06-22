@@ -44,15 +44,6 @@ cd vizlink-data-warehouse-etl
 ```bash
 pip install -r requirements.txt
 ```
-
-### 3. Configure credentials
-```bash
-cp config/config.env.example config/config.env
-# Edit config/config.env with your server names
-```
-
-> **Important:** `config/config.env` is in `.gitignore` — never commit it.
-
 ### 4. Run the pipeline
 ```bash
 python etl/etl_pipeline.py
@@ -61,10 +52,4 @@ python etl/etl_pipeline.py
 Logs are written to `etl_pipeline.log` and printed to the console.
 
 ---
-
-
----
-
-
-
 
