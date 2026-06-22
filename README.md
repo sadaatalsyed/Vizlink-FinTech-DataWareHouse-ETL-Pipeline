@@ -31,25 +31,3 @@ VDWH_Auto (SQL Server OLAP / Star Schema)
 | Fact | Fact_ShopOrderTransactions |
 
 ---
-
-## Setup
-
-### 1. Clone the repo
-```bash
-git clone https://github.com/sadaatalsyed/vizlink-data-warehouse-etl.git
-cd vizlink-data-warehouse-etl
-```
-
-### 2. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-### 4. Run the pipeline
-```bash
-python etl/etl_pipeline.py
-```
-
-Logs are written to `etl_pipeline.log` and printed to the console.
-
----
-
