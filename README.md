@@ -62,29 +62,9 @@ Logs are written to `etl_pipeline.log` and printed to the console.
 
 ---
 
-## Key Improvements Over Original Notebook
-
-| Issue | Fix Applied |
-|-------|------------|
-| Hardcoded server names & credentials | Moved to `config/config.env` (dotenv) |
-| `NOT IN` on large tables (slow, NULL-unsafe) | Replaced with `NOT EXISTS` |
-| Duplicate load code in every block | Single `load_incremental()` helper |
-| New `pyodbc.connect()` per query | One connection per ETL block |
-| No error handling / logging | `try/except` + Python `logging` module |
-| Notebook-only format (hard to schedule) | Plain `.py` — schedulable via Task Scheduler / cron |
 
 ---
 
-## Scheduling (Windows Task Scheduler)
 
-```
-Action: python C:\path\to\etl\etl_pipeline.py
-Trigger: Daily at 02:00 AM
-```
 
----
 
-## Related Repos
-
-- [`sadaatalsyed/members`](https://github.com/sadaatalsyed/members) — PHP/MySQL web project
-# Vizlink-FinTech-ETL-Pipeline
